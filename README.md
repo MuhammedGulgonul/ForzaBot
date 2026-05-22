@@ -69,10 +69,18 @@ The bot doesn't magically know what your game looks like. You need to provide it
 
 ---
 
-## ⚙️ Customizing Keybinds
+## ⚙️ Default Keybinds & Customization
 
-By default, the bot holds `W` during races, presses `X` at the finish screen, and presses `Enter` in the menu. 
-If your layout is different, you can edit the `STATE_ACTIONS` dictionary inside `config.py` using any standard text editor.
+By default, the bot is pre-configured with the following actions based on the game state it detects:
+
+| Detected State | Bot Action |
+| :--- | :--- |
+| **🏎️ Racing** | Holds **`W`** continuously to accelerate |
+| **🏁 Race Finished** | Presses **`X`** to continue |
+| **📋 Menu Screen** | Presses **`Enter`** to restart the race |
+| **⏳ Loading** | *Does nothing, waits for the next screen* |
+
+If your layout is different, you can edit the `STATE_ACTIONS` dictionary inside `config.py` using any standard text editor to change these keys.
 
 ---
 
